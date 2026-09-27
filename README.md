@@ -1,1 +1,1 @@
-# hemanadh-portfolio
+Hello! My name is D Hemanadh, and I am a dedicated software development student exploring modern version control, web development architectures, and API integrations. This repository serves as my primary workspace for tracking labs, building mini-projects, and documenting my continuous coding journey. # Portfolio Feature Update# 

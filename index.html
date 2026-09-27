@@ -5,10 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Boya Devaarya | AI & Data Science Student</title>
-
-    <meta name="description"
-        content="Portfolio of Boya Devaarya, a B.Tech AI & Data Science student and aspiring software developer.">
+    <title>D Hemanadh | Student Developer</title>
 
     <style>
         * {
@@ -19,27 +16,26 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #0b0b12;
-            color: #f5f5f5;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f6f8fb;
+            color: #172033;
             line-height: 1.6;
         }
 
         a {
             text-decoration: none;
-            color: inherit;
         }
 
         /* NAVBAR */
 
         nav {
             position: fixed;
-            top: 0;
             width: 100%;
+            top: 0;
             z-index: 1000;
-            background: rgba(11, 11, 18, 0.9);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid #242433;
+            background: rgba(246, 248, 251, 0.94);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e3e7ee;
         }
 
         .nav-container {
@@ -52,27 +48,29 @@
         }
 
         .logo {
-            font-size: 22px;
-            font-weight: bold;
-            color: #8b5cf6;
+            font-size: 23px;
+            font-weight: 800;
+            color: #2563eb;
         }
 
         .nav-links {
             display: flex;
-            gap: 25px;
             list-style: none;
+            gap: 28px;
         }
 
         .nav-links a {
-            color: #d1d1dc;
-            transition: 0.3s;
+            color: #4b5563;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.25s;
         }
 
         .nav-links a:hover {
-            color: #a78bfa;
+            color: #2563eb;
         }
 
-        /* GENERAL */
+        /* COMMON */
 
         .container {
             max-width: 1100px;
@@ -85,15 +83,13 @@
         }
 
         .section-title {
-            font-size: 35px;
-            margin-bottom: 15px;
-            text-align: center;
+            font-size: 36px;
+            margin-bottom: 10px;
         }
 
-        .section-subtitle {
-            text-align: center;
-            color: #9ca3af;
-            margin-bottom: 45px;
+        .section-description {
+            color: #6b7280;
+            margin-bottom: 40px;
         }
 
         /* HERO */
@@ -103,761 +99,120 @@
             display: flex;
             align-items: center;
             background:
-                radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.18), transparent 30%),
-                radial-gradient(circle at 20% 80%, rgba(34, 211, 238, 0.08), transparent 30%),
-                #0b0b12;
+                linear-gradient(135deg, #eef4ff 0%, #f8fafc 50%, #edfdf8 100%);
         }
 
         .hero {
             max-width: 1100px;
+            width: 100%;
             margin: auto;
             padding: 100px 25px 50px;
         }
 
-        .hero-tag {
-            display: inline-block;
-            color: #a78bfa;
-            border: 1px solid #3b3157;
-            padding: 8px 15px;
-            border-radius: 30px;
-            margin-bottom: 20px;
+        .hero-layout {
+            display: grid;
+            grid-template-columns: 1.5fr 0.8fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .hero-label {
+            color: #2563eb;
             font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
+            text-transform: uppercase;
         }
 
         .hero h1 {
-            font-size: clamp(45px, 8vw, 80px);
+            font-size: clamp(48px, 7vw, 78px);
             line-height: 1.05;
             margin-bottom: 20px;
+            color: #111827;
         }
 
         .hero h1 span {
-            color: #8b5cf6;
+            color: #2563eb;
         }
 
-        .hero p {
-            max-width: 700px;
-            color: #b6b6c5;
+        .hero-text {
+            color: #596579;
+            max-width: 650px;
             font-size: 18px;
             margin-bottom: 30px;
         }
 
-        .buttons {
+        .hero-buttons {
             display: flex;
-            gap: 15px;
+            gap: 12px;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 12px 22px;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: 0.3s;
             display: inline-block;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: 0.25s;
         }
 
-        .primary-btn {
-            background: #8b5cf6;
+        .primary {
+            background: #2563eb;
             color: white;
         }
 
-        .primary-btn:hover {
-            background: #7c3aed;
+        .primary:hover {
+            background: #1d4ed8;
             transform: translateY(-2px);
         }
 
-        .secondary-btn {
-            border: 1px solid #39394a;
-            color: #ddd;
+        .outline {
+            border: 1px solid #cbd5e1;
+            color: #374151;
+            background: white;
         }
 
-        .secondary-btn:hover {
-            border-color: #8b5cf6;
-            color: #a78bfa;
+        .outline:hover {
+            border-color: #2563eb;
+            color: #2563eb;
         }
 
-        /* ABOUT */
+        /* HERO CARD */
 
-        #about {
-            background: #10101a;
+        .profile-card {
+            background: white;
+            border: 1px solid #dfe5ed;
+            border-radius: 22px;
+            padding: 35px;
+            box-shadow: 0 20px 50px rgba(37, 99, 235, 0.08);
         }
 
-        .about-content {
-            max-width: 850px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .about-content p {
-            color: #b7b7c5;
-            font-size: 17px;
-            margin-bottom: 18px;
-        }
-
-        .education-card {
-            margin-top: 30px;
-            padding: 25px;
-            background: #151521;
-            border: 1px solid #29293a;
-            border-radius: 12px;
-            text-align: left;
-        }
-
-        .education-card h3 {
-            color: #a78bfa;
-            margin-bottom: 8px;
-        }
-
-        .education-card p {
-            margin: 5px 0;
-            font-size: 15px;
-        }
-
-        /* PROJECTS */
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        .project-card {
-            background: #151521;
-            border: 1px solid #29293a;
-            padding: 30px;
-            border-radius: 15px;
-            transition: 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-6px);
-            border-color: #8b5cf6;
-            box-shadow: 0 10px 35px rgba(139, 92, 246, 0.12);
-        }
-
-        .project-number {
-            color: #8b5cf6;
-            font-size: 14px;
-            margin-bottom: 12px;
-        }
-
-        .project-card h3 {
-            font-size: 23px;
-            margin-bottom: 12px;
-        }
-
-        .project-card p {
-            color: #a9a9b8;
-            margin-bottom: 20px;
-        }
-
-        .project-tech {
+        .profile-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #2563eb;
+            color: white;
             display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
-
-        .tech {
-            background: #222232;
-            color: #c4b5fd;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-        }
-
-        .project-link {
-            color: #a78bfa;
-            font-weight: bold;
-        }
-
-        .project-link:hover {
-            color: #c4b5fd;
-        }
-
-        /* SKILLS */
-
-        #skills {
-            background: #10101a;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .skill-card {
-            background: #151521;
-            border: 1px solid #29293a;
-            border-radius: 12px;
-            padding: 25px;
-        }
-
-        .skill-card h3 {
-            color: #a78bfa;
-            margin-bottom: 15px;
-        }
-
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .skill {
-            padding: 7px 12px;
-            border: 1px solid #353548;
-            border-radius: 6px;
-            color: #d1d1dc;
-            font-size: 14px;
-        }
-
-        /* ACHIEVEMENTS */
-
-        .achievement-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .achievement {
-            padding: 25px;
-            border: 1px solid #29293a;
-            background: #151521;
-            border-radius: 12px;
-        }
-
-        .achievement h3 {
-            color: #a78bfa;
-            margin-bottom: 8px;
-        }
-
-        .achievement p {
-            color: #aaaaba;
-            font-size: 14px;
-        }
-
-        /* CONTACT */
-
-        .contact-box {
-            max-width: 750px;
-            margin: auto;
-            text-align: center;
-            padding: 45px 30px;
-            background: #151521;
-            border: 1px solid #29293a;
-            border-radius: 15px;
-        }
-
-        .contact-box p {
-            color: #aaaaba;
-            margin-bottom: 25px;
-        }
-
-        .contact-links {
-            display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
+            font-size: 35px;
+            font-weight: 800;
+            margin-bottom: 22px;
         }
 
-        /* FOOTER */
+        .profile-card h3 {
+            font-size: 23px;
+            margin-bottom: 6px;
+        }
 
-        footer {
-            border-top: 1px solid #242433;
-            padding: 25px;
-            text-align: center;
-            color: #77778a;
+        .profile-card p {
+            color: #6b7280;
             font-size: 14px;
         }
 
-        /* RESPONSIVE */
-
-        @media (max-width: 800px) {
-
-            .nav-links {
-                gap: 12px;
-                font-size: 13px;
-            }
-
-            .projects-grid,
-            .skills-grid,
-            .achievement-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero h1 {
-                font-size: 50px;
-            }
-
-            .section-title {
-                font-size: 30px;
-            }
-        }
-
-        @media (max-width: 500px) {
-
-            .nav-container {
-                padding: 15px;
-            }
-
-            .logo {
-                font-size: 18px;
-            }
-
-            .nav-links {
-                gap: 8px;
-                font-size: 11px;
-            }
-
-            .hero {
-                padding-left: 18px;
-                padding-right: 18px;
-            }
-
-            .container {
-                padding: 0 18px;
-            }
-
-            section {
-                padding: 75px 0;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- NAVIGATION -->
-
-    <nav>
-        <div class="nav-container">
-
-            <div class="logo">BD.</div>
-
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-
-        </div>
-    </nav>
-
-
-    <!-- HERO -->
-
-    <section id="home">
-
-        <div class="hero">
-
-            <div class="hero-tag">
-                AI & Data Science Student
-            </div>
-
-            <h1>
-                Hi, I'm <span>Boya Devaarya.</span>
-            </h1>
-
-            <p>
-                I'm a B.Tech Artificial Intelligence & Data Science student
-                at REVA University, Bengaluru, focused on learning software
-                development, Python, C, data structures and modern web
-                technologies by building real projects.
-            </p>
-
-            <div class="buttons">
-
-                <a href="#projects" class="btn primary-btn">
-                    View Projects
-                </a>
-
-                <a href="https://www.linkedin.com/in/boya-devaarya-8412a6364/"
-                   target="_blank"
-                   class="btn secondary-btn">
-                    LinkedIn
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ABOUT -->
-
-    <section id="about">
-
-        <div class="container">
-
-            <h2 class="section-title">About Me</h2>
-
-            <p class="section-subtitle">
-                A student developer building, learning and experimenting with technology.
-            </p>
-
-            <div class="about-content">
-
-                <p>
-                    I'm Boya Devaarya, an aspiring software developer and
-                    Artificial Intelligence & Data Science student based in
-                    Bengaluru, India.
-                </p>
-
-                <p>
-                    I enjoy turning ideas into practical projects while
-                    strengthening my foundations in programming, problem
-                    solving and web development.
-                </p>
-
-                <p>
-                    Currently, I'm learning and working with C, Python, HTML,
-                    Data Structures and other technologies while exploring
-                    AI and software development.
-                </p>
-
-                <div class="education-card">
-
-                    <h3>Education</h3>
-
-                    <p>
-                        <strong>B.Tech in Artificial Intelligence & Data Science</strong>
-                    </p>
-
-                    <p>
-                        REVA University, Bengaluru
-                    </p>
-
-                    <p>
-                        Expected Graduation: 2029
-                    </p>
-
-                    <p>
-                        12th Grade: 93.4% &nbsp; | &nbsp;
-                        10th Grade: 75%
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- PROJECTS -->
-
-    <section id="projects">
-
-        <div class="container">
-
-            <h2 class="section-title">Projects</h2>
-
-            <p class="section-subtitle">
-                Real projects I've built and deployed.
-            </p>
-
-            <div class="projects-grid">
-
-                <!-- PROJECT 1 -->
-
-                <div class="project-card">
-
-                    <div class="project-number">
-                        PROJECT 01
-                    </div>
-
-                    <h3>Smart Expense Tracker</h3>
-
-                    <p>
-                        A web-based expense tracking application designed
-                        to help users record, organize and monitor their
-                        personal expenses through a simple interactive
-                        interface.
-                    </p>
-
-                    <div class="project-tech">
-
-                        <span class="tech">Python</span>
-                        <span class="tech">Streamlit</span>
-                        <span class="tech">Data Tracking</span>
-
-                    </div>
-
-                    <a href="https://smart-expense-tracker-eczamosartqmer5cvrwwcq.streamlit.app/"
-                       target="_blank"
-                       class="project-link">
-                        View Live Project →
-                    </a>
-
-                </div>
-
-
-                <!-- PROJECT 2 -->
-
-                <div class="project-card">
-
-                    <div class="project-number">
-                        PROJECT 02
-                    </div>
-
-                    <h3>Anime Theme Portfolio</h3>
-
-                    <p>
-                        A personal portfolio project inspired by anime
-                        aesthetics, combining personal branding with a
-                        creative web interface to showcase my profile,
-                        skills and projects.
-                    </p>
-
-                    <div class="project-tech">
-
-                        <span class="tech">HTML</span>
-                        <span class="tech">CSS</span>
-                        <span class="tech">Web Design</span>
-                        <span class="tech">Hugging Face</span>
-
-                    </div>
-
-                    <a href="https://huggingface.co/spaces/Devaarya/devaarya-portfolio-anime-theme"
-                       target="_blank"
-                       class="project-link">
-                        View Live Project →
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- SKILLS -->
-
-    <section id="skills">
-
-        <div class="container">
-
-            <h2 class="section-title">Skills</h2>
-
-            <p class="section-subtitle">
-                Technologies and areas I'm currently learning and working with.
-            </p>
-
-            <div class="skills-grid">
-
-                <div class="skill-card">
-
-                    <h3>Programming</h3>
-
-                    <div class="skill-list">
-
-                        <span class="skill">C</span>
-                        <span class="skill">Python</span>
-                        <span class="skill">Java</span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <h3>Web Development</h3>
-
-                    <div class="skill-list">
-
-                        <span class="skill">HTML</span>
-                        <span class="skill">CSS</span>
-                        <span class="skill">JavaScript</span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <h3>Computer Science</h3>
-
-                    <div class="skill-list">
-
-                        <span class="skill">Data Structures</span>
-                        <span class="skill">DBMS</span>
-                        <span class="skill">Problem Solving</span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <h3>AI & Data</h3>
-
-                    <div class="skill-list">
-
-                        <span class="skill">Artificial Intelligence</span>
-                        <span class="skill">Data Science</span>
-                        <span class="skill">Python</span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <h3>Tools</h3>
-
-                    <div class="skill-list">
-
-                        <span class="skill">Git</span>
-                        <span class="skill">GitHub</span>
-                        <span class="skill">VS Code</span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <h3>Currently Learning</h3>
-
-                    <div class="skill-list">
-
-                        <span class="skill">DSA</span>
-                        <span class="skill">Advanced Python</span>
-                        <span class="skill">Web Development</span>
-                        <span class="skill">AI</span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ACHIEVEMENTS -->
-
-    <section id="achievements">
-
-        <div class="container">
-
-            <h2 class="section-title">Achievements & Experience</h2>
-
-            <p class="section-subtitle">
-                Some of my academic and extracurricular highlights.
-            </p>
-
-            <div class="achievement-grid">
-
-                <div class="achievement">
-
-                    <h3>IBM SkillsBuild</h3>
-
-                    <p>
-                        Completed a Python certification through
-                        IBM SkillsBuild.
-                    </p>
-
-                </div>
-
-
-                <div class="achievement">
-
-                    <h3>Algorand Hackathon</h3>
-
-                    <p>
-                        Participated in an Algorand hackathon,
-                        gaining experience with collaborative
-                        problem solving and project development.
-                    </p>
-
-                </div>
-
-
-                <div class="achievement">
-
-                    <h3>FACE Sports Club</h3>
-
-                    <p>
-                        Active member of the Sports Club at REVA University's
-                        Forum of Aspiring Computer Engineers.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-
-    <section id="contact">
-
-        <div class="container">
-
-            <h2 class="section-title">Let's Connect</h2>
-
-            <p class="section-subtitle">
-                Interested in collaborating, discussing projects or connecting?
-            </p>
-
-            <div class="contact-box">
-
-                <p>
-                    I'm always open to learning, building projects and
-                    connecting with other students and developers.
-                </p>
-
-                <div class="contact-links">
-
-                    <a href="https://www.linkedin.com/in/boya-devaarya-8412a6364/"
-                       target="_blank"
-                       class="btn primary-btn">
-                        LinkedIn
-                    </a>
-
-                    <a href="#projects"
-                       class="btn secondary-btn">
-                        View Projects
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <p>
-            © 2026 Boya Devaarya. Built with HTML & CSS.
-        </p>
-
-    </footer>
-
-
-</body>
-</html>
+        .profile-line {
+            height: 1px;
 ```
